@@ -28,9 +28,11 @@ node{
     def numberbuilddir = "${builddir}\\Rob_${env.BUILD_NUMBER}"
     new File("${numberbuilddir}").mkdir()
     
-    dir("${numberbuilddir}") {
-      echo "Working Directory is: ${pwd()}"
-      bat "cd"
+    bat "cd"
+    
+    //dir("${numberbuilddir}") {
+      //echo "Working Directory is: ${pwd()}"
+      //bat "cd"
       //echo bat "devenv.com \"${numberclonedir}\"  "
       
   }
