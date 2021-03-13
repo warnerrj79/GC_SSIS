@@ -4,11 +4,10 @@ node{
     new File(newdir).mkdir()
     echo "Working Directory is: ${pwd()}"
     
-    dir("newdir")
-    
-    echo "Working Directory is: ${pwd()}"
-    
-    checkout scm
+    dir(${newdir}) {
+      echo "Working Directory is: ${pwd()}"
+      checkout scm
+    }
     
     
   }
