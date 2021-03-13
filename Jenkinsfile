@@ -2,8 +2,10 @@ node{
   stage('Clone') {
     echo "${env.BUILD_NUMBER}"
     
-    new File("C:\\Rob_${env.BUILD_NUMBER}").mkdir()
-    dir('C:\\Rob2')
+    newdir = new File("C:\\Rob_${env.BUILD_NUMBER}").mkdir()
+    echo newdir
+    
+    dir(newdir)
     
     checkout scm
     
