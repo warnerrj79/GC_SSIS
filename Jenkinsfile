@@ -6,20 +6,9 @@ node{
       new File("${clonedir}").mkdir()
     }
   
-  stage('Clone') {
-       
-    def numberclonedir = "${clonedir}\\Rob_${env.BUILD_NUMBER}"
-    new File("${numberclonedir}").mkdir()
-    
-    dir("${numberclonedir}") {
-      echo "Working Directory is: ${pwd()}"
-      checkout scm
-    }
-    
-    
-  }
-  stage('Build') {
-    def builddir = "C:\\2_Builds"
+  def numberclonedir = "${clonedir}\\Rob_${env.BUILD_NUMBER}"
+  
+  def builddir = "C:\\2_Builds"
     if (fileExists("${builddir}")) {
       echo "Build Directory Exists"
     } else {
@@ -27,11 +16,25 @@ node{
     }
     
     def numberbuilddir = "${builddir}\\Rob_${env.BUILD_NUMBER}"
+  
+  
+  
+  
+  stage('Clone') {
+    new File("${numberclonedir}").mkdir()
+    
+    dir("${numberclonedir}") {
+      echo "Working Directory is: ${pwd()}"
+      checkout scm
+    }
+  }
+  stage('Build') {
+    
     new File("${numberbuilddir}").mkdir()
     
-    //dir("${numberclonedir}") {
-      //bat "cd"
-    //}
+    dir("${numberclonedir}") {
+      bat "cd"
+    }
     
     //dir("${numberbuilddir}") {
       //echo "Working Directory is: ${pwd()}"
