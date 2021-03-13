@@ -1,7 +1,7 @@
 node{
   stage('Clone') {
-    new File('C:\Rob').mkdir()
-    dir ('C:\Rob')
+    new File('C:\\Rob').mkdir()
+    dir ('C:\\Rob')
     
     checkout scm
     
