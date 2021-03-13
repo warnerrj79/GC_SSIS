@@ -1,4 +1,4 @@
-node('sql-tools1') {
+node{
   stage('Clone') {
     checkout scm
   }
