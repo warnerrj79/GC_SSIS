@@ -1,10 +1,10 @@
 node{
   stage('Clone') {
-    def newbuilddir = "C:\\Builds"
+    def newbuilddir = "C:\\1_Clones"
     if (fileExists("newbuilddir")) {
       new File(newbuilddir).mkdir()
     }
-        
+    
     def newdir = "${newbuilddir}\\Rob_${env.BUILD_NUMBER}"
     new File(newdir).mkdir()
     echo "Working Directory is: ${pwd()}"
@@ -17,12 +17,12 @@ node{
     
   }
   stage('Build') {
+    def newbuilddir = "C:\\2_Builds"
+    if (fileExists("newbuilddir")) {
+      new File(newbuilddir).mkdir()
+    }
 
     
-    echo "Hey!"
-    echo "Directory is ${env.GIT_CHECKOUT_DIR}"
-    echo "${env.GIT_CHECKOUT_DIR}"
-    echo "${env.GIT_COMMITTER_NAME}"
   }
     
 }
