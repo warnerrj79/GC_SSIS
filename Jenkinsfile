@@ -2,7 +2,9 @@ node{
   stage('Clone') {
     echo "${env.BUILD_NUMBER}"
     
-    newdir = new File("C:\\Rob_${env.BUILD_NUMBER}").mkdir()
+    def newdir = "C:\\Rob_${env.BUILD_NUMBER}"
+      
+    new File(newdir).mkdir()
     echo newdir
     
     dir(newdir)
