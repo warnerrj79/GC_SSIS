@@ -4,7 +4,7 @@ node{
     if (fileExists("${clonedir}")) {
       echo "Clone Directory Exists"
     } else {
-      new File("${cloneddir}").mkdir()
+      new File("${clonedir}").mkdir()
     }
     
     def numberclonedir = "${clonedir}\\Rob_${env.BUILD_NUMBER}"
