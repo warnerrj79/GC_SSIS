@@ -1,5 +1,7 @@
 node{
   stage('Clone') {
+    echo "${env.BUILD_NUMBER}"
+    
     new File('C:\\Rob2').mkdir()
     dir('C:\\Rob2')
     
