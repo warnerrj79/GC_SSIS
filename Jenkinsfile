@@ -1,10 +1,10 @@
 node{
   stage('Clone') {
     def clonedir = "C:\\1_Clones"
-    if (fileExists("${clonedir}")) {
+    if (fileExists(${clonedir})) {
       echo "Clone Directory Exists"
     } else {
-      new File("${cloneddir}").mkdir()
+      new File(${cloneddir}).mkdir()
     }
     
     def numberclonedir = "${clonedir}\\Rob_${env.BUILD_NUMBER}"
