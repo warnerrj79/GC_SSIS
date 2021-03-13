@@ -1,11 +1,8 @@
 node{
   stage('Clone') {
     checkout scm
-    git = gitInfo.toMap()
     
-    git
-    echo git
-    
+   echo GIT_CHECKOUT_DIR
   }
   stage('Build') {
     echo "Hey!"
