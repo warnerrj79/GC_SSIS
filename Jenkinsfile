@@ -1,12 +1,9 @@
 node{
   stage('Clone') {
-    echo "${env.BUILD_NUMBER}"
-    
+    pwd
     def newdir = "C:\\Rob_${env.BUILD_NUMBER}"
-      
     new File(newdir).mkdir()
-    echo newdir
-    
+    pwd
     dir(newdir)
     
     checkout scm
