@@ -2,4 +2,4 @@
 
 stage('Clone') {
                 checkout scm
-                }
+}
