@@ -1,6 +1,6 @@
 node{
   stage('Clone') {
-    def newbuilddir = "C:\Builds"
+    def newbuilddir = "C:\\Builds"
     if (fileExists("newbuilddir")) {
       new File(newbuilddir).mkdir()
     }
