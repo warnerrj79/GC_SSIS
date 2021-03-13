@@ -1,7 +1,7 @@
 node{
   stage('Clone') {
     def clonedir = "C:\\1_Clones"
-    if (fileExists("clonedir")) {
+    if (!fileExists("clonedir")) {
       new File(cloneddir).mkdir()
     }
     
@@ -17,7 +17,7 @@ node{
   }
   stage('Build') {
     def builddir = "C:\\2_Builds"
-    if (fileExists("builddir")) {
+    if (!fileExists("builddir")) {
       new File(builddir).mkdir()
     }
     
