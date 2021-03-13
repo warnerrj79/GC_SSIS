@@ -1,14 +1,14 @@
 node{
   stage('Clone') {
-    def newclonedir = "C:\\1_Clones"
-    if (fileExists("newclonedir")) {
-      new File(newcloneddir).mkdir()
+    def clonedir = "C:\\1_Clones"
+    if (fileExists("clonedir")) {
+      new File(cloneddir).mkdir()
     }
     
-    def newdir = "${newclonedir}\\Rob_${env.BUILD_NUMBER}"
-    new File(newdir).mkdir()
+    def numberclonedir = "${clonedir}\\Rob_${env.BUILD_NUMBER}"
+    new File(numberclonedir).mkdir()
     
-    dir("${newdir}") {
+    dir("${numberclonedir}") {
       echo "Working Directory is: ${pwd()}"
       checkout scm
     }
@@ -16,9 +16,17 @@ node{
     
   }
   stage('Build') {
-    def newbuilddir = "C:\\2_Builds"
-    if (fileExists("newbuilddir")) {
-      new File(newbuilddir).mkdir()
+    def builddir = "C:\\2_Builds"
+    if (fileExists("builddir")) {
+      new File(builddir).mkdir()
+    }
+    
+    def numberbuilddir = "${builddir}\\Rob_${env.BUILD_NUMBER}"
+    new File(numberbuilddir).mkdir()
+    
+    dir("${numberbuilddir}") {
+      echo "Working Directory is: ${pwd()}"
+   
     }
 
     
