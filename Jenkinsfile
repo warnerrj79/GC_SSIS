@@ -1,13 +1,12 @@
 node{
   stage('Clone') {
     def newclonedir = "C:\\1_Clones"
-    if (fileExists("newbuilddir")) {
-      new File(newbuilddir).mkdir()
+    if (fileExists("newclonedir")) {
+      new File(newcloneddir).mkdir()
     }
     
     def newdir = "${newclonedir}\\Rob_${env.BUILD_NUMBER}"
     new File(newdir).mkdir()
-    echo "Working Directory is: ${pwd()}"
     
     dir("${newdir}") {
       echo "Working Directory is: ${pwd()}"
