@@ -35,7 +35,7 @@ node{
       //bat "cd"
       //echo bat "devenv.com \"${numberclonedir}\"  "
       
-  }
+  //}
 
     
   }
