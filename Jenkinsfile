@@ -30,7 +30,7 @@ node{
     
     dir("${numberbuilddir}") {
       echo "Working Directory is: ${pwd()}"
-      echo bat "cd"
+      bat "cd"
       //echo bat "devenv.com \"${numberclonedir}\"  "
       
   }
