@@ -47,6 +47,10 @@ node{
   stage('Copy S3') {
     bat "\"C:\\Program Files\\Amazon\\AWSCLIV2\\aws.exe\" \"s3\" \"cp\" \"${numberbuilddir}\\GC_Test.ispac\" \"s3://gctestssis/Test/\""
   }
+  
+    stage('Deploy Package') {
+    echo "To Do"
+  }
 
     
 }
