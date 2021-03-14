@@ -42,7 +42,10 @@ node{
     dir ("${numberclonedir}\\GC_Test\\bin\\Development") {
       bat "copy GC_Test.ispac ${numberbuilddir}"
     }
-    
+  }
+  
+  stage('Copy S3') {
+    echo "Copy that bad boy!!!
   }
 
     
