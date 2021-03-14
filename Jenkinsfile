@@ -19,6 +19,8 @@ node{
   
   
   
+  //////////////////////////////////////////////////////////////////
+    
   
   stage('Clone') {
     new File("${numberclonedir}").mkdir()
@@ -38,16 +40,8 @@ node{
     }
     
     dir ("${numberclonedir}\\GC_Test\\bin\\Development") {
-      bat "copy GC_Test.ispac c:\\"
+      bat "copy GC_Test.ispac ${numberbuilddir}"
     }
-    
-    //dir("${numberbuilddir}") {
-      //echo "Working Directory is: ${pwd()}"
-      //bat "cd"
-      //echo bat "devenv.com \"${numberclonedir}\"  "
-      
-  //}
-
     
   }
 
