@@ -45,7 +45,7 @@ node{
   }
   
   stage('Copy S3') {
-    bat "\"C:\\Program Files\\Amazon\\AWSCLIV2\\aws s3 cp GC_Test.ispac s3://gctestssis/Test/\""
+    bat "\"C:\\Program Files\\Amazon\\AWSCLIV2\\aws.exe s3 cp GC_Test.ispac s3://gctestssis/Test/\""
   }
 
     
