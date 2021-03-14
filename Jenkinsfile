@@ -34,7 +34,6 @@ node{
     
     dir("${numberclonedir}") {
       bat "cd"
-      bat "setx PATH "C:\myfolder;%PATH%""
       bat "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE\\devenv.com \".\\GC_Test\\GC_Test.sln\" "
     }
     
