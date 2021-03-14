@@ -45,7 +45,7 @@ node{
   }
   
   stage('Copy S3') {
-    echo "Copy that bad boy!!!
+    echo "Copy that bad boy!!!"
   }
 
     
