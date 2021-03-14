@@ -37,9 +37,9 @@ node{
       bat "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE\\devenv.com\" \".\\GC_Test\\GC_Test.sln\" /rebuild"
     }
     
-    dir ("${numberclonedir}\\GC_Test\\bin\\Development") {
-      bat "copy GC_Test.ispac c:\"
-    }
+    //dir ("${numberclonedir}\\GC_Test\\bin\\Development") {
+      //bat "copy GC_Test.ispac c:\"
+    //}
     
     //dir("${numberbuilddir}") {
       //echo "Working Directory is: ${pwd()}"
