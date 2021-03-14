@@ -34,7 +34,7 @@ node{
     
     dir("${numberclonedir}") {
       bat "cd"
-      bat "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE\\devenv.com \".\\GC_Test\\GC_Test.sln\" "
+      bat "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE\\devenv.com\" \".\\GC_Test\\GC_Test.sln\" "
     }
     
     //dir("${numberbuilddir}") {
