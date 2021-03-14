@@ -34,6 +34,7 @@ node{
     
     dir("${numberclonedir}") {
       bat "cd"
+      bat "devenv.com \".\\GC_Test\\GC_Test.sln\""
     }
     
     //dir("${numberbuilddir}") {
