@@ -45,7 +45,7 @@ node{
   }
   
   stage('Copy S3') {
-    echo "Copy that bad boy!!!"
+    bat "aws s3 cp GC_Test.ispac s3://gctestssis/Test/"
   }
 
     
